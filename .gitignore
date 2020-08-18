@@ -14,7 +14,7 @@
 
 # production
 /build
-
+/db_with-redux-toolkit
 # misc
 .DS_Store
 *.pem

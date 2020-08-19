@@ -1,17 +1,17 @@
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux";
 
-import { selectClock } from '../lib/slices/clockSlice'
+import { selectClock } from "../../lib/slices/clockSlice";
 
 const formatTime = (time) => {
   // cut off except hh:mm:ss
-  return new Date(time).toJSON().slice(11, 19)
-}
+  return new Date(time).toJSON().slice(11, 19);
+};
 
 const Clock = () => {
-  const { lastUpdate, light } = useSelector(selectClock)
+  const { lastUpdate, light } = useSelector(selectClock);
 
   return (
-    <div className={light ? 'light' : ''}>
+    <div className={light ? "light" : ""}>
       {formatTime(lastUpdate)}
       <style jsx>{`
         div {
@@ -27,7 +27,7 @@ const Clock = () => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default Clock
+export default Clock;
